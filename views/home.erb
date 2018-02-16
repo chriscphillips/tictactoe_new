@@ -1,0 +1,34 @@
+<center>
+<script src= "/js/getdate.js"> 
+</script>
+<p id="date"> </p>
+<head>
+<title>  Tic Tac Toe Game</title>
+<link href="<%= url('/css/main.css') %>" rel= "stylesheet" type="text/css" />
+</head>
+<body>
+Play Tic Tac Toe
+<table style="width:100%">
+    <table align="center" border= "3"bordercolor= "black" width= "300" cellpadding= "25">
+<tr>
+<td><form method="post" action="board"><input type="text" name="grid1" align="center" size="1"></td>
+<td><form method="post" action="board"><input type="text" name="grid2"  align="center" size="1"></td>
+<td><form method="post" action="board"><input type="text" name="grid3"  align="center" size="1"></td>
+</tr>
+<tr>
+<td><form method="post" action="board"><input type="text" name="grid4" align="center" size="1"></td> 
+<td><form method="post" action="board"><input type="text" name="grid5"  align="center" size="1"></td>
+<td><form method="post" action="board"><input type="text" name="grid6"  align="center" size="1"></td>
+</tr>
+<tr>
+<td><form method="post" action="board"><input type="text" name="grid7" align="center" size="1"></td>
+<td><form method="post" action="board"><input type="text" name="grid8" align="center" size="1"></td>
+<td><form method="post" action="board"><input type="text" name="grid9"  align="center" size="1"></td>
+</tr>
+<input type="submit">
+</form>
+</center>
+</body>
+<script>
+    window.onload=getOrderDate('date');
+</script>
