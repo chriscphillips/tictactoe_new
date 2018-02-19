@@ -12,39 +12,111 @@ Play Tic Tac Toe<br><br>
 <table style="width:100%">
     <table align="center" border= "3"bordercolor= "black" width= "300" cellpadding= "25">
 <tr>
-<td>
-    <form method="post" action="board"><input type="text" name="grid1" align="center" size="1" value= <%= grid1 %>>
-    </td>
-<td>
-    <form method="post" action="board"><input type="text" name="grid2" align="center" size="1" value= <%=grid2 %>>
-    </td>
-<td>
-    <form method="post" action="board"><input type="text" name="grid3" align="center" size="1" value= <%= grid3 %>>
-    </td>
+<td class="grill1" align="center" valign="middle">
+<form method="post" action="board">
+    <% if grill1.upcase == 'X' || grill1.upcase == 'O' %>
+    <input type="hidden" name="grill1" align="center" size="1" value= <%= grill1 %>>
+    <%= grill1 %>
+    <% end %>
+    <% if grill1.upcase != 'X' && grill1.upcase != 'O' %>
+    <input type="hidden" name="grill1" align="center" size="1" value= "">
+    <input type="submit" name="grill1" align="center" size="1" value= "1">
+   <% end %>
+</td>
+<td class="grill2" align="center" valign="middle">
+<form method="post" action="board">
+    <% if grill2.upcase == 'X' || grill2.upcase == 'O' %>
+    <input type="hidden" name="grill2" align="center" size="1" value= <%= grill2 %>>
+    <%= grill2 %>
+    <% end %>
+    <% if grill2.upcase != 'X' && grill2.upcase != 'O' %>
+    <input type="hidden" name="grill2" align="center" size="1" value= "">
+    <input type="submit" name="grill2" align="center" size="1" value= "2">
+   <% end %>
+</td>
+<td class="grill3" align="center" valign="middle">
+<form method="post" action="board">
+    <% if grill3.upcase == 'X' || grill3.upcase == 'O' %>
+    <input type="hidden" name="grill3" align="center" size="1" value= <%= grill3 %>>
+    <%= grill3 %>
+    <% end %>
+    <% if grill3.upcase != 'X' && grill3.upcase != 'O' %>
+    <input type="hidden" name="grill3" align="center" size="1" value= "">
+    <input type="submit" name="grill3" align="center" size="1" value= "3">
+   <% end %>
+</td>
 </tr>
 <tr>
-<td>
-    <form method="post" action="board"><input type="text" name="grid4" align="center" size="1" value= <%= grid4 %>>
-    </td>
-<td>
-    <form method="post" action="board"><input type="text" name="grid5" align="center" size="1" value= <%=grid5 %>>
-    </td>
-<td>
-    <form method="post" action="board"><input type="text" name="grid6" align="center" size="1" value= <%= grid6 %>>
-    </td>
+<td class="grill4" align="center" valign="middle">
+<form method="post" action="board">
+    <% if grill4.upcase == 'X' || grill4.upcase == 'O' %>
+    <input type="hidden" name="grill4" align="center" size="1" value= <%= grill4 %>>
+    <%= grill4 %>
+    <% end %>
+    <% if grill4.upcase != 'X' && grill4.upcase != 'O' %>
+    <input type="hidden" name="grill4" align="center" size="1" value= "">
+    <input type="submit" name="grill4" align="center" size="1" value= "4">
+   <% end %>
+</td>
+<td class="grill5" align="center" valign="middle">
+<form method="post" action="board">
+    <% if grill5.upcase == 'X' || grill5.upcase == 'O' %>
+    <input type="hidden" name="grill5" align="center" size="1" value= <%= grill5 %>>
+    <%= grill5 %>
+    <% end %>
+    <% if grill5.upcase != 'X' && grill5.upcase != 'O' %>
+    <input type="hidden" name="grill5" align="center" size="1" value= "">
+    <input type="submit" name="grill5" align="center" size="1" value= "5">
+   <% end %>
+</td>
+<td class="grill6" align="center" valign="middle">
+<form method="post" action="board">
+    <% if grill6.upcase == 'X' || grill6.upcase == 'O' %>
+    <input type="hidden" name="grill6" align="center" size="1" value= <%= grill6 %>>
+    <%= grill6 %>
+    <% end %>
+    <% if grill6.upcase != 'X' && grill6.upcase != 'O' %>
+    <input type="hidden" name="grill6" align="center" size="1" value= "">
+    <input type="submit" name="grill6" align="center" size="1" value= "6">
+   <% end %>
+</td>
 </tr>
 <tr>
-<td>
-    <form method="post" action="board"><input type="text" name="grid7" align="center" size="1" value= <%= grid7 %>>
-    </td>
-<td>
-    <form method="post" action="board"><input type="text" name="grid8" align="center" size="1" value= <%=grid8 %>>
-    </td>
-<td>
-    <form method="post" action="board"><input type="text" name="grid9" align="center" size="1" value= <%= grid9 %>>
-    </td>
+<td class="grill7" align="center" valign="middle">
+<form method="post" action="board">
+    <% if grill7.upcase == 'X' || grill7.upcase == 'O' %>
+    <input type="hidden" name="grill7" align="center" size="1" value= <%= grill7 %>>
+    <%= grill7 %>
+    <% end %>
+    <% if grill7.upcase != 'X' && grill7.upcase != 'O' %>
+    <input type="hidden" name="grill7" align="center" size="1" value= "">
+    <input type="submit" name="grill7" align="center" size="1" value= "7">
+   <% end %>
+</td>
+<td class="grill8" align="center" valign="middle">
+<form method="post" action="board">
+    <% if grill8.upcase == 'X' || grill8.upcase == 'O' %>
+    <input type="hidden" name="grill8" align="center" size="1" value= <%= grill8 %>>
+    <%= grill8 %>
+    <% end %>
+    <% if grill8.upcase != 'X' && grill8.upcase != 'O' %>
+    <input type="hidden" name="grill8" align="center" size="1" value= "">
+    <input type="submit" name="grill8" align="center" size="1" value= "8">
+   <% end %>
+</td>
+<td class="grill9" align="center" valign="middle">
+<form method="post" action="board">
+    <% if grill9.upcase == 'X' || grill9.upcase == 'O' %>
+    <input type="hidden" name="grill9" align="center" size="1" value= <%= grill9 %>>
+    <%= grill9 %>
+    <% end %>
+    <% if grill9.upcase != 'X' && grill9.upcase != 'O' %>
+    <input type="hidden" name="grill9" align="center" size="1" value= "">
+    <input type="submit" name="grill9" align="center" size="1" value= "9">
+   <% end %>
+</td>
 </tr>
-<input type="submit">
+<input type="submit" class="buttonSubmit">
 </form>
 </center>
 </body>

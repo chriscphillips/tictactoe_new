@@ -31,11 +31,15 @@ footer {
 input[type=submit] {
    padding:5px 15px;
    background:lime;
-   color:lime;
+   color:black;
    border:0 none;
    
 }
 
+.buttonSubmit
+{
+ display: none;
+}
 
 input[type=text] {
  border: none;

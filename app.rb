@@ -7,52 +7,115 @@ get '/' do
 end
 
 post '/board' do 
-    grid1 = params[:grid1]
-    grid2 = params[:grid2]
-    grid3 = params[:grid3]
-    grid4 = params[:grid4]
-    grid5 = params[:grid5]
-    grid6 = params[:grid6]
-    grid7 = params[:grid7]
-    grid8 = params[:grid8]
-    grid9 = params[:grid9]
-    puts grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8, grid9
-    redirect '/play?grid1=' + grid1 + '&grid2=' + grid2 + '&grid3=' + grid3 + '&grid4=' + grid4 + '&grid5=' + grid5 + '&grid6=' + grid6 + '&grid7=' + grid7 + '&grid8=' + grid8 + '&grid9=' + grid9 
+    grill1 = params[:grill1]
+    grill2 = params[:grill2]
+    grill3 = params[:grill3]
+    grill4 = params[:grill4]
+    grill5 = params[:grill5]
+    grill6 = params[:grill6]
+    grill7 = params[:grill7]
+    grill8 = params[:grill8]
+    grill9 = params[:grill9]
+    redirect '/play?grill1=' + grill1.upcase + '&grill2=' + grill2.upcase + '&grill3=' + grill3.upcase + '&grill4=' + grill4.upcase + '&grill5=' + grill5.upcase + '&grill6=' + grill6.upcase + '&grill7=' + grill7.upcase + '&grill8=' + grill8.upcase + '&grill9=' + grill9.upcase  
 end
 
 get '/play' do
 	winner_result = ""
-    grid1 = params[:grid1]
-    grid2 = params[:grid2]
-    grid3 = params[:grid3]
-    grid4 = params[:grid4]
-    grid5 = params[:grid5]
-    grid6 = params[:grid6]
-    grid7 = params[:grid7]
-    grid8 = params[:grid8]
-    grid9 = params[:grid9]
-    play_o = play_random(grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8, grid9)
-    puts play_o 
+   grill1 = params[:grill1]
+   grill2 = params[:grill2]
+   grill3 = params[:grill3]
+   grill4 = params[:grill4]
+   grill5 = params[:grill5]
+   grill6 = params[:grill6]
+   grill7 = params[:grill7]
+   grill8 = params[:grill8]
+   grill9 = params[:grill9]
+    play_o = play_random(grill1, grill2, grill3, grill4, grill5, grill6, grill7, grill8, grill9) 
     if play_o == "grill1"
-       grid1 = "O" 
+      grill1 = "O" 
     elsif play_o == "grill2"
-	   grid2 = "O"
+	  grill2 = "O"
 	elsif play_o == "grill3"
-	   grid3 = "O"
+	   grill3 = "O"
 	elsif play_o == "grill4"
-		grid4 = "O"
+		grill4 = "O"
 	elsif play_o == "grill5"
-		grid5 = "O"
+		grill5 = "O"
 	elsif play_o == "grill6"
-		grid6 = "O"
+		grill6 = "O"
 	elsif play_o == "grill7"
-		grid7 = "O"
+		grill7 = "O"
 	elsif play_o == "grill8"
-		grid8 = "O"
+		grill8 = "O"
 	elsif play_o == "grill9"
-		grid9 = "O"
+		grill9 = "O"
 	end
-    winner_result = winners(grid1.upcase, grid2.upcase, grid3.upcase, grid4.upcase, grid5.upcase, grid6.upcase, grid7.upcase, grid8.upcase, grid9.upcase) 
-    erb :play, :locals => {:grid1 => grid1, :grid2 => grid2, :grid3 => grid3, :grid4 => grid4, :grid5 => grid5, :grid6 => grid6, :grid7 => grid7, :grid8 => grid8, :grid9 => grid9, :winner_result => winner_result}
+
+    if grill1 == "O"
+      grill1 = "O"
+   elsif grill1 == ""
+    grill1 = ""
+   else
+    grill1 = "X"
+   end
+   if grill2 == "O"
+    grill2 = "O"
+   elsif grill2 == ""
+    grill2 = ""
+   else
+    grill2 = "X"
+   end
+   if grill3 == "O"
+    grill3 = "O"
+   elsif grill3 == ""
+    grill3 = ""
+   else
+    grill3 = "X"
+   end
+   if grill4 == "O"
+    grill4 = "O"
+   elsif grill4 == ""
+    grill4 = ""
+   else
+    grill4 = "X"
+   end
+   if grill5 == "O"
+    grill5 = "O"
+   elsif grill5 == ""
+    grill5 = ""
+   else
+    grill5 = "X"
+   end
+   if grill6 == "O"
+    grill6 = "O"
+   elsif grill6 == ""
+    grill6 = ""
+   else
+    grill6 = "X"
+   end
+   if grill7 == "O"
+    grill7 = "O"
+   elsif grill7 == ""
+    grill7 = ""
+   else
+    grill7 = "X"
+   end
+   if grill8 == "O"
+    grill8 = "O"
+   elsif grill8 == ""
+    grill8 = ""
+   else
+    grill8 = "X"
+   end
+   if grill9 == "O"
+    grill9 = "O"
+   elsif grill9 == ""
+    grill9 = ""
+   else
+    grill9 = "X"
+   end
+    winner_result = winners(grill1.upcase, grill2.upcase, grill3.upcase, grill4.upcase, grill5.upcase, grill6.upcase, grill7.upcase, grill8.upcase, grill9.upcase) 
+    erb :play, :locals => {:grill1 => grill1, :grill2 => grill2, :grill3 => grill3, :grill4 => grill4, :grill5 => grill5, :grill6 => grill6, :grill7 => grill7, :grill8 => grill8, :grill9 => grill9, :winner_result => winner_result}
 end
+
 

@@ -1,4 +1,4 @@
-     
+   
     def play_random(a,b,c,d,e,f,g,h,i) 
        grill_hash = {1 => a, 2 => b, 3 => c, 4 => d, 5 => e, 6 => f, 7 => g, 8 => h, 9 => i}
        all_grill = [1,2,3,4,5,6,7,8,9]
@@ -7,8 +7,7 @@
             if grill_hash[i] != ""
             taken_grill.push(i)
             end
-        end
-
+    end
             untaken_grill = all_grill - taken_grill  
             random_pick = untaken_grill.shuffle.pop.to_s
             a = "grill"
@@ -37,4 +36,12 @@
         end
         return $result 
     end
+
+    
+
+
+
+    
+
+
 
