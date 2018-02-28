@@ -7,49 +7,62 @@
 <link href="<%= url('/css/main.css') %>" rel= "stylesheet" type="text/css" />
 </head>
 <body>
-Play Tic Tac Toe
+Play Tic Tac Toe<br>
+<p1>To play Easy place an O in any of the squares.</p1><br>
 <table style="width:100%">
-    <table align="center" border= "3"bordercolor= "black" width= "300" cellpadding= "25">
+    <table align="center" border= "3"bordercolor= "black" width= "300" cellpadding= "45">
 <tr>
-<td class="grill1" align="center" valign="middle"><form method="post" action="board">
+<td class="grill1" align="center" valign="middle">
+    <form method="post" action="board">
     <input type="hidden" value="" name="grill1" id="grill1" align="center" size="1">
     <input type="submit" value="1" name="grill1" id="grill1" align="center" size="1">
 </td>
-<td class="grill2" align="center" valign="middle"><form method="post" action="board">
+<td class="grill2" align="center" valign="middle">
+    <form method="post" action="board">
     <input type="hidden" value="" name="grill2" id="grill2" align="center" size="1">
     <input type="submit" value="2" name="grill2" id="grill2" align="center" size="1">
 </td>
-<td class="grill3" align="center" valign="middle"><form method="post" action="board">
+<td class="grill3" align="center" valign="middle">
+    <form method="post" action="board">
     <input type="hidden" value="" name="grill3" id="grill3" align="center" size="1">
     <input type="submit" value="3" name="grill3" id="grill3" align="center" size="1">
 </td>
 <tr>
-<td class="grill4" align="center" valign="middle"><form method="post" action="board">
+<td class="grill4" align="center" valign="middle">
+    <form method="post" action="board">
     <input type="hidden" value="" name="grill4" id="grill4" align="center" size="1">
     <input type="submit" value="4" name="grill4" id="grill4" align="center" size="1">
 </td>
-<td class="grill5" align="center" valign="middle"><form method="post" action="board">
+<td class="grill5" align="center" valign="middle">
+    <form method="post" action="board">
     <input type="hidden" value="" name="grill5" id="grill5" align="center" size="1">
     <input type="submit" value="5" name="grill5" id="grill5" align="center" size="1">
 </td>
-<td class="grill6" align="center" valign="middle"><form method="post" action="board">
+<td class="grill6" align="center" valign="middle">
+    <form method="post" action="board">
     <input type="hidden" value="" name="grill6" id="grill6" align="center" size="1">
     <input type="submit" value="6" name="grill6" id="grill6" align="center" size="1">
 </td>
 <tr>
-<td class="grill7" align="center" valign="middle"><form method="post" action="board">
+<td class="grill7" align="center" valign="middle">
+    <form method="post" action="board">
     <input type="hidden" value="" name="grill7" id="grill7" align="center" size="1">
     <input type="submit" value="7" name="grill7" id="grill7" align="center" size="1">
 </td>
-<td class="grill8" align="center" valign="middle"><form method="post" action="board">
+<td class="grill8" align="center" valign="middle">
+    <form method="post" action="board">
     <input type="hidden" value="" name="grill8" id="grill8" align="center" size="1">
     <input type="submit" value="8" name="grill8" id="grill8" align="center" size="1">
 </td>
-<td class="grill9" align="center" valign="middle"><form method="post" action="board">
+<td class="grill9" align="center" valign="middle">
+    <form method="post" action="board">
     <input type="hidden" value="" name="grill9" id="grill9" align="center" size="1">
     <input type="submit" value="9" name="grill9" id="grill9" align="center" size="1">
 </td>
-</tr><br><br>
+</tr>
+<form method="post" action="board">
+<input type="hidden" action="/player" name="opponent" value="Easy"> 
+<input type="submit" action="/play" name="opponent" value="Click to Play Hard"><br> 
 <input type="submit" class="buttonSubmit">
 </center>
 </body> 
