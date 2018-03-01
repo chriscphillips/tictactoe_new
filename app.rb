@@ -18,8 +18,7 @@ post '/board' do
     grill8 = params[:grill8]
     grill9 = params[:grill9]
     opponent = params[:opponent]
-    ai_pick = params[:ai_pick]
-    redirect '/play?grill1=' + grill1.upcase + '&grill2=' + grill2.upcase + '&grill3=' + grill3.upcase + '&grill4=' + grill4.upcase + '&grill5=' + grill5.upcase + '&grill6=' + grill6.upcase + '&grill7=' + grill7.upcase + '&grill8=' + grill8.upcase + '&grill9=' + grill9.upcase + '&opponent=' + opponent + '&ai_pick=' + ai_pick
+    redirect '/play?grill1=' + grill1.upcase + '&grill2=' + grill2.upcase + '&grill3=' + grill3.upcase + '&grill4=' + grill4.upcase + '&grill5=' + grill5.upcase + '&grill6=' + grill6.upcase + '&grill7=' + grill7.upcase + '&grill8=' + grill8.upcase + '&grill9=' + grill9.upcase + '&opponent=' + opponent 
 end
 
 get '/play' do
@@ -33,7 +32,6 @@ get '/play' do
    grill7 = params[:grill7]
    grill8 = params[:grill8]
    grill9 = params[:grill9]
-   ai_pick = params[:ai_pick]
    opponent=params[:opponent]
    if opponent == "easy"
       play_x = play_random(grill1, grill2, grill3, grill4, grill5, grill6, grill7, grill8, grill9)
@@ -132,7 +130,7 @@ get '/play' do
    end
    
     winner_result = winners(grill1.upcase, grill2.upcase, grill3.upcase, grill4.upcase, grill5.upcase, grill6.upcase, grill7.upcase, grill8.upcase, grill9.upcase) 
-    erb :play, :locals => {:grill1 => grill1, :grill2 => grill2, :grill3 => grill3, :grill4 => grill4, :grill5 => grill5, :grill6 => grill6, :grill7 => grill7, :grill8 => grill8, :grill9 => grill9, :winner_result => winner_result, :ai_pick => ai_pick, :opponent => opponent}
+    erb :play, :locals => {:grill1 => grill1, :grill2 => grill2, :grill3 => grill3, :grill4 => grill4, :grill5 => grill5, :grill6 => grill6, :grill7 => grill7, :grill8 => grill8, :grill9 => grill9, :winner_result => winner_result, :opponent => opponent}
 end
 
 
