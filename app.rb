@@ -18,8 +18,8 @@ post '/board' do
     grill8 = params[:grill8]
     grill9 = params[:grill9]
     opponent = params[:opponent]
-    redirect '/play?grill1=' + grill1.upcase + '&grill2=' + grill2.upcase + '&grill3=' + grill3.upcase + '&grill4=' + grill4.upcase + '&grill5=' + grill5.upcase + '&grill6=' + grill6.upcase + '&grill7=' + grill7.upcase + '&grill8=' + grill8.upcase + '&grill9=' + grill9.upcase + '&opponent=' + opponent 
-end
+    redirect '/play?grill1=' + grill1.upcase + '&grill2=' + grill2.upcase + '&grill3=' + grill3.upcase + '&grill4=' + grill4.upcase + '&grill5=' + grill5.upcase + '&grill6=' + grill6.upcase + '&grill7=' + grill7.upcase + '&grill8=' + grill8.upcase + '&grill9=' + grill9.upcase + '&opponent=' + opponent  
+  end
 
 get '/play' do
 	winner_result = ""
@@ -32,19 +32,13 @@ get '/play' do
    grill7 = params[:grill7]
    grill8 = params[:grill8]
    grill9 = params[:grill9]
-   opponent=params[:opponent]
-   if opponent == "easy"
-      play_x = play_random(grill1, grill2, grill3, grill4, grill5, grill6, grill7, grill8, grill9)
-    elsif opponent == "hard"
-      play_x = plays_ai(grill1, grill2, grill3, grill4, grill5, grill6, grill7, grill8, grill9)
+   opponent = params[:opponent]
+    if opponent == "Easy"
+         play_x = play_random(grill1, grill2, grill3, grill4, grill5, grill6, grill7, grill8, grill9)
     end
-
-    if opponent == "easy"
-       opponent = "easy"
-    elsif opponent == "hard"
-      opponent = "hard"
+    if opponent == "Hard"
+         play_x = plays_ai(grill1, grill2, grill3, grill4, grill5, grill6, grill7, grill8, grill9)
     end
-
     if play_x == "grill1"
       grill1 = "X" 
     elsif play_x == "grill2"
