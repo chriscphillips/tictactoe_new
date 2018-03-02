@@ -35,8 +35,7 @@ get '/play' do
    opponent = params[:opponent]
     if opponent == "Easy"
          play_x = play_random(grill1, grill2, grill3, grill4, grill5, grill6, grill7, grill8, grill9)
-    end
-    if opponent == "Hard"
+    elsif opponent == "Hard"
          play_x = plays_ai(grill1, grill2, grill3, grill4, grill5, grill6, grill7, grill8, grill9)
     end
     if play_x == "grill1"
