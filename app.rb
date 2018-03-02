@@ -19,7 +19,7 @@ post '/board' do
     grill9 = params[:grill9]
     opponent = params[:opponent]
     redirect '/play?grill1=' + grill1.upcase + '&grill2=' + grill2.upcase + '&grill3=' + grill3.upcase + '&grill4=' + grill4.upcase + '&grill5=' + grill5.upcase + '&grill6=' + grill6.upcase + '&grill7=' + grill7.upcase + '&grill8=' + grill8.upcase + '&grill9=' + grill9.upcase + '&opponent=' + opponent  
-  end
+end
 
 get '/play' do
 	winner_result = ""
@@ -43,21 +43,21 @@ get '/play' do
       grill1 = "X" 
     elsif play_x == "grill2"
 	  grill2 = "X"
-	elsif play_x == "grill3"
+	  elsif play_x == "grill3"
 	   grill3 = "X"
-	elsif play_x == "grill4"
+	  elsif play_x == "grill4"
 		grill4 = "X"
-	elsif play_x == "grill5"
+	  elsif play_x == "grill5"
 		grill5 = "X"
-	elsif play_x == "grill6"
+	  elsif play_x == "grill6"
 		grill6 = "X"
-	elsif play_x == "grill7"
+	  elsif play_x == "grill7"
 		grill7 = "X"
-	elsif play_x == "grill8"
+	  elsif play_x == "grill8"
 		grill8 = "X"
-	elsif play_x == "grill9"
+	  elsif play_x == "grill9"
 		grill9 = "X"
-	end
+	  end
 
     if grill1 == "X"
       grill1 = "X"
